@@ -14,7 +14,7 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#contact"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Search</a></li>
+        <li><%= link_to pictures_path do %><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Search<% end %></li>
         <% if !user_signed_in? %> 
 
         <li><%= link_to "Sign In", new_user_session_path %></li>
@@ -24,7 +24,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Add Picture</a></li>
+            <li><%= link_to "Upload Picture", new_picture_path %></li>
             <li><%= link_to "Edit Settings", edit_user_registration_path %></li>
             <li><a href="#">Notifications</a></li>
             <li role="separator" class="divider"></li>

@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @picture.image(:medium) %>
+<p><%= @picture.celebrity %></p>
+<p><%= @picture.location %></p>
+<p><%= @picture.time %></p>
+<p><%= @picture.comment %></p>
+
+<% if current_user == @picture.user %>
+  <%= link_to 'Edit', edit_picture_path(@picture) %> |
+<% end %>
+<%= link_to 'Back', pictures_path %>

@@ -4,7 +4,7 @@
     <h1>Welcome</h1>
   <% else %>
     <h1><%= current_user.email %></h1>
-    pictures
+    <%= link_to "Upload Picture", new_picture_path, class:"btn btn-default" %>
   <% end %>
 
 </div> <!-- /container -->

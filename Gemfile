@@ -18,6 +18,9 @@ gem 'font-awesome-sass'
 gem 'devise'
 gem 'simple_form'
 
+gem 'paperclip', '~> 5.0.0'
+gem 'aws-sdk', '< 2.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'letter_opener'
