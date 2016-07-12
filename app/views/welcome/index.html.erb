@@ -2,6 +2,12 @@
 
   <% if !user_signed_in? %> 
     <h1>Welcome</h1>
+    <h4>Pictures uploaded <%= Picture.all.count %></h4>
+    <hr>
+    <% Picture.all.order("RANDOM()").each do |picture| %>
+        <%= render partial: 'pictures/picture_panel', locals: {picture: picture} %>
+      <% end %>
+
   <% else %>
     <h1><%= current_user.email %></h1>
     <%= link_to "Upload Picture", new_picture_path, class:"btn btn-default" %>
