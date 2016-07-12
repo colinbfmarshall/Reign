@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'jquery-ui-rails'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass'
@@ -20,6 +21,8 @@ gem 'simple_form'
 
 gem 'paperclip', '~> 5.0.0'
 gem 'aws-sdk', '< 2.0'
+
+# gem 'rails4-autocomplete'
 
 group :development, :test do
   gem 'byebug'

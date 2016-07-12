@@ -6,6 +6,9 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   def index
     @pictures = Picture.all
+
+    @pictures = @pictures.celeb_name(params[:celeb_name]) if params[:celeb_name].present?
+
   end
 
   # GET /pictures/1

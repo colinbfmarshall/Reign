@@ -6,4 +6,5 @@ class Picture < ActiveRecord::Base
   
   validates :image, :celebrity, :location, :comment, presence: true
 
+  scope :celeb_name, -> (celebrity) { where("celebrity ILIKE ?", "#{celebrity}%")}
 end
