@@ -1,12 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<%= image_tag @picture.image(:medium) %>
-<p><%= @picture.celebrity %></p>
-<p><%= @picture.location %></p>
-<p><%= @picture.time %></p>
-<p><%= @picture.comment %></p>
-
-<% if current_user == @picture.user %>
-  <%= link_to 'Edit', edit_picture_path(@picture) %> |
-<% end %>
-<%= link_to 'Back', pictures_path %>
+  <div class="container">
+    <div class="row centered">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel" style="box-shadow: 4px 4px 2px #888888;">
+          <div class="panel-body centered" style="height:600px;background:url(<%= @picture.image %>) no-repeat;background-size:cover;background-position:center;border-radius: 2px">
+            <% if current_user == @picture.user %>
+              <%= link_to 'Edit', edit_picture_path(@picture), class:"btn btn-default"  %>
+              <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default"  %>
+            <% end %>
+          </div>
+          <hr>
+          <p><%= @picture.celebrity %></p>
+          <p><%= @picture.location %></p>
+          <p><%= @picture.time.strftime("%b %Y") %></p>
+          <p><%= @picture.comment %></p>
+        </div>
+      </div>
+    </div>
+  </div>
