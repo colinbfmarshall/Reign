@@ -6,9 +6,12 @@
     <%= f.input :location %>
     <%= f.input :time, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year, discard_day: true, order: [:month, :year] %>
     <%= f.input :comment %>
-    <%= f.input :image, as: :file %>
-  </div>
+    <%= f.input :image, as: :file, :input_html => { onchange:"previewFile()"} %>
+    
+      <%= image_tag "", alt: "Image preview...", style: "width:100%;height:100%;border-radius:4px" %>
 
+  </div>
+  <hr>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

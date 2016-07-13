@@ -6,7 +6,7 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 body {
-  margin-top: 30px;
+  margin-top: 20x;
   font-family: 'Indie Flower', cursive;
 }
 
@@ -20,4 +20,36 @@ body {
 
 .navbar-brand {
   font-size: 1.8em;
+}
+
+.btn {
+  font-size: 1.2em;
+}
+
+#search_button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#search_button:hover {
+  color: white;
+  background: #9d9d9d;
+  border: none;
+  box-shadow: 2px 2px 1px #9d9d9d;
+}
+
+.devise_panel {
+  margin-top:15%;
+}
+
+i {
+  color: grey;
+  font-size: .9em;
+}
+
+#popup {
+    float: right;
+    display: none;
+    bottom: 10%;
+    position: absolute;
 }
